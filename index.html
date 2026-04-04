@@ -164,6 +164,7 @@
     cursor: pointer; transition: all 0.25s;
     text-decoration: none; display: block;
     position: relative; overflow: hidden;
+    user-select: none;
   }
   .link-card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -279,7 +280,8 @@
 
       <div class="links-grid">
 
-        <a class="link-card" href="https://tripfactory-ajay.github.io/exceptional-partner-program/" target="_blank" style="--accent:#1e6fdc">
+        <!-- ROW 1 – portals with credentials -->
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/exceptional-partner-program/','ORN-EPP','UKEPP2026')" style="--accent:#1e6fdc">
           <div class="link-card-icon">🏆</div>
           <h3>ORN Exceptional Partner Programme</h3>
           <p>Access the EPP portal for partner programme details and resources.</p>
@@ -288,9 +290,9 @@
             <div class="cred-item"><span class="cred-label">Password</span><span class="cred-val">UKEPP2026</span></div>
           </div>
           <span class="link-arrow">›</span>
-        </a>
+        </div>
 
-        <a class="link-card" href="https://tripfactory-ajay.github.io/dmc-europe/" target="_blank" style="--accent:#3dba6f">
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/dmc-europe/','ORN-EU','EUROPE2026')" style="--accent:#3dba6f">
           <div class="link-card-icon">🌍</div>
           <h3>ORN DMC Hub – UK &amp; Europe Inbound</h3>
           <p>UK/EU DMC Hub inbound blueprint. 90/10 split arrangement.</p>
@@ -299,9 +301,9 @@
             <div class="cred-item"><span class="cred-label">Password</span><span class="cred-val">EUROPE2026</span></div>
           </div>
           <span class="link-arrow">›</span>
-        </a>
+        </div>
 
-        <a class="link-card" href="https://tripfactory-ajay.github.io/contracting-portal/" target="_blank" style="--accent:#f5c800">
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/contracting-portal/','','TFEU2026')" style="--accent:#f5c800">
           <div class="link-card-icon">📋</div>
           <h3>ORN Contracting Portal</h3>
           <p>Manish &amp; Ken – contracting portal for agreements and documentation.</p>
@@ -310,23 +312,9 @@
             <div class="cred-item"><span class="cred-label">Password</span><span class="cred-val">TFEU2026</span></div>
           </div>
           <span class="link-arrow">›</span>
-        </a>
+        </div>
 
-        <a class="link-card" href="https://tripfactory-ajay.github.io/orn-credit-framework/" target="_blank" style="--accent:#9b59b6">
-          <div class="link-card-icon">💳</div>
-          <h3>ORN Credit Framework</h3>
-          <p>Access the credit framework documentation and guidelines.</p>
-          <span class="link-arrow">›</span>
-        </a>
-
-        <a class="link-card" href="https://tripfactory-ajay.github.io/legal-review/" target="_blank" style="--accent:#e85d2f">
-          <div class="link-card-icon">⚖️</div>
-          <h3>ORN EPP Legal Review Pack</h3>
-          <p>Legal review documentation and compliance materials for the EPP.</p>
-          <span class="link-arrow">›</span>
-        </a>
-
-        <a class="link-card" href="https://tripfactory-ajay.github.io/hotel-revenue-dashboard/" target="_blank" style="--accent:#e74c3c">
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/hotel-revenue-dashboard/','ORN-HTL','ORNHOTEL2026')" style="--accent:#e74c3c">
           <div class="link-card-icon">🏨</div>
           <h3>ORN Hotel Sales &amp; Revenue</h3>
           <p>Hotel sales dashboard and revenue reporting portal.</p>
@@ -335,7 +323,47 @@
             <div class="cred-item"><span class="cred-label">Password</span><span class="cred-val">ORNHOTEL2026</span></div>
           </div>
           <span class="link-arrow">›</span>
-        </a>
+        </div>
+
+        <!-- ROW 2 – info/open portals -->
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/orn-credit-framework/','','')" style="--accent:#9b59b6">
+          <div class="link-card-icon">💳</div>
+          <h3>ORN Credit Framework</h3>
+          <p>Access the credit framework documentation and guidelines.</p>
+          <span class="link-arrow">›</span>
+        </div>
+
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/legal-review/','','')" style="--accent:#e85d2f">
+          <div class="link-card-icon">⚖️</div>
+          <h3>ORN EPP Legal Review Pack</h3>
+          <p>Legal review documentation and compliance materials for the EPP.</p>
+          <span class="link-arrow">›</span>
+        </div>
+
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/tripfactory-connections/','ORN-EU','TFUK2026')" style="--accent:#17a589">
+          <div class="link-card-icon">🔌</div>
+          <h3>ORN Supplier API Dashboard</h3>
+          <p>TripFactory connections – supplier API integrations and pipeline.</p>
+          <div class="creds">
+            <div class="cred-item"><span class="cred-label">User</span><span class="cred-val">ORN-EU</span></div>
+            <div class="cred-item"><span class="cred-label">Password</span><span class="cred-val">TFUK2026</span></div>
+          </div>
+          <span class="link-arrow">›</span>
+        </div>
+
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/globalorgchart2026/','','')" style="--accent:#2980b9">
+          <div class="link-card-icon">🏢</div>
+          <h3>Global Organisation Chart</h3>
+          <p>ORN global org chart – teams, structure and reporting lines 2026.</p>
+          <span class="link-arrow">›</span>
+        </div>
+
+        <div class="link-card" onclick="openPortal('https://tripfactory-ajay.github.io/office-update/','','')" style="--accent:#f39c12">
+          <div class="link-card-icon">📍</div>
+          <h3>ORN Global Office Updates</h3>
+          <p>Latest news and updates from ORN offices around the world.</p>
+          <span class="link-arrow">›</span>
+        </div>
 
       </div>
     </div>
@@ -395,6 +423,56 @@
   document.getElementById('portal-pw').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') doLogin();
   });
+
+  // Open a portal, auto-filling credentials via a hidden form POST or by
+  // injecting them into the page via localStorage before navigating.
+  // Since these are cross-origin pages we can't inject into them directly,
+  // so we open the URL and copy the credentials to clipboard with a toast notice.
+  function openPortal(url, user, pass) {
+    // Open the portal immediately
+    window.open(url, '_blank');
+
+    // If there are credentials, copy them and show a toast
+    if (user || pass) {
+      const text = user && pass ? user + ' / ' + pass : (pass || user);
+      navigator.clipboard.writeText(text).catch(() => {});
+      showToast(user, pass);
+    }
+  }
+
+  function showToast(user, pass) {
+    // Remove any existing toast
+    const old = document.getElementById('cred-toast');
+    if (old) old.remove();
+
+    const toast = document.createElement('div');
+    toast.id = 'cred-toast';
+    toast.innerHTML = `
+      <div style="font-size:0.75rem;opacity:0.7;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.08em;">Credentials copied to clipboard</div>
+      ${user ? `<div><span style="opacity:0.6;font-size:0.78rem;">User&nbsp;&nbsp;</span><strong>${user}</strong></div>` : ''}
+      ${pass ? `<div style="margin-top:2px;"><span style="opacity:0.6;font-size:0.78rem;">Pass&nbsp;&nbsp;</span><strong>${pass}</strong></div>` : ''}
+    `;
+    toast.style.cssText = `
+      position:fixed; bottom:28px; left:50%; transform:translateX(-50%);
+      background:rgba(20,35,65,0.97); border:1px solid rgba(255,255,255,0.18);
+      color:white; padding:14px 22px; border-radius:12px;
+      font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem;
+      box-shadow:0 8px 32px rgba(0,0,0,0.5); z-index:9999;
+      animation:toastIn 0.25s ease;
+      min-width:220px; text-align:center;
+    `;
+    document.head.insertAdjacentHTML('beforeend', `
+      <style>
+        @keyframes toastIn { from{opacity:0;transform:translateX(-50%) translateY(10px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+        @keyframes toastOut { from{opacity:1} to{opacity:0} }
+      </style>
+    `);
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.style.animation = 'toastOut 0.3s ease forwards';
+      setTimeout(() => toast.remove(), 300);
+    }, 3500);
+  }
 </script>
 
 </body>
